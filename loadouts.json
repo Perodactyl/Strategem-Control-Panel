@@ -1,0 +1,85 @@
+{
+    "loadouts": {
+        "Defense Automaton": [
+            "Reinforce",
+            "Resupply",
+            "Eagle Airstrike",
+            "[Default]",
+            "Quasar Cannon",
+            "Shield Generator Pack",
+            "Anti-Tank Emplacement",
+            "[Default]"
+        ],
+        "Farmer": [
+            "Reinforce",
+            "Resupply",
+            "Orbital Airburst Strike",
+            "[Default]",
+            "Jump Pack",
+            "Anti-Materiel Rifle",
+            "Fast Recon Vehicle",
+            "Hellbomb"
+        ],
+        "Objectives": [
+            "Reinforce",
+            "Resupply",
+            "Prospecting Drill",
+            "Seismic Probe",
+            "Hive Breaker Drill",
+            "Seismic Probe",
+            "SSSD Delivery",
+            "SOS Beacon"
+        ],
+        "SC Grinding": [
+            "Reinforce",
+            "Resupply",
+            "Orbital Gas Strike",
+            "[Default]",
+            "Anti-Materiel Rifle",
+            "Jump Pack",
+            "Fast Recon Vehicle",
+            "[Default]"
+        ],
+        "Stealth": [
+            "Reinforce",
+            "Resupply",
+            "Orbital Laser",
+            "Eagle Smoke Strike",
+            "Anti-Materiel Rifle",
+            "Jump Pack",
+            "[Default]",
+            "Hellbomb"
+        ],
+        "Terminid MG": [
+            "Reinforce",
+            "Resupply",
+            "Orbital Airburst Strike",
+            "Eagle Airstrike",
+            "Machine Gun",
+            "Shield Generator Pack",
+            "Fast Recon Vehicle",
+            "HMG Emplacement"
+        ],
+        "WASP": [
+            "Reinforce",
+            "Resupply",
+            "Orbital Gatling Barrage",
+            "Orbital Railcannon Strike",
+            "W.A.S.P. Launcher",
+            "[Default]",
+            "Fast Recon Vehicle",
+            "Hellbomb"
+        ]
+    },
+    "latest": [
+        "Reinforce",
+        "Resupply",
+        "Orbital Airburst Strike",
+        "[Default]",
+        "Jump Pack",
+        "Anti-Materiel Rifle",
+        "Fast Recon Vehicle",
+        "Hellbomb"
+    ],
+    "selected": "Terminid MG"
+}

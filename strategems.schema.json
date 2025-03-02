@@ -1,0 +1,77 @@
+{
+	"$schema": "http://json-schema.org/draft-07/schema#",
+	"$id": "StrategemList",
+	"definitions": {
+		"strategem": {
+			"properties": {
+				"id": {
+					"description": "Used internally to locate files related to a strategem.",
+					"type": "string"
+				},
+				"name": {
+					"description": "Common name of strategem.",
+					"type": "string"
+				},
+				"fullName": {
+					"description": "Full name of strategem, including model number.",
+					"type": "string"
+				},
+				"type": {"enum": [
+					"misc",
+					"supportWeapon",
+					"backpack",
+					"eagle",
+					"orbital",
+					"vehicle",
+					"sentry",
+					"emplacement"
+				]},
+				"combo": {
+					"description": "Set of inputs used to call this strategem. Should be a series of 'w', 'a', 's', and 'd'.",
+					"type": "string"
+				},
+				"cooldown": {
+					"description": "Base cooldown time in seconds, without ship upgrades.",
+					"type": "number"
+				},
+				"calldownTime": {
+					"description": "Base calldown time in seconds, without ship upgrades.",
+					"type": "number"
+				},
+				"hasBackpack": {
+					"description": "True if this strategem has an associated backpack.",
+					"type": "boolean"
+				},
+				"affectedBy": {
+					"description": "List of ship upgrades which affect this strategem.",
+					"items": {"enum": [
+						"streamlinedRequestProcess",
+						"handCarts",
+						"payrollManagementSystem",
+						"liquidVentilatedCockpit",
+						"pitCrewHazardPay",
+						"expandedWeaponsBay",
+						"targetingSoftwareUpgrade",
+						"moraleAugmentation",
+						"syntheticSupplementation",
+						"rapidLaunchSystem",
+						"streamlinedLaunchProcess",
+						"dynamicTracking"
+					]},
+					"uniqueItems": true
+				}
+			},
+			"required": ["id", "name", "combo"],
+			"additionalProperties": false
+		}
+	},
+	"properties": {
+		"departments": {
+			"additionalProperties": {
+				"type": "array",
+				"items": {"$ref": "#/definitions/strategem"}
+			}
+		}
+	},
+	"required": ["departments"]
+}

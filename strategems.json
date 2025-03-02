@@ -1,0 +1,471 @@
+{
+	"$schema": "strategems.schema.json",
+	"departments": {
+		"Patriotic Administration Center": [
+			{
+				"id": "machineGun",
+				"name": "Machine Gun",
+				"fullName": "MG-43 Machine Gun",
+				"combo": "saswd",
+				"cooldown": 480,
+				"calldownTime": 3,
+				"type": "supportWeapon",
+				"affectedBy": ["moraleAugmentation","streamlinedRequestProcess"]
+			},
+			{
+				"id": "antiMaterielRifle",
+				"name": "Anti-Materiel Rifle",
+				"fullName": "APW-1 Anti-Material Rifle",
+				"combo": "sadws",
+				"cooldown": 480,
+				"calldownTime": 7.75,
+				"type": "supportWeapon",
+				"affectedBy": ["moraleAugmentation","streamlinedRequestProcess"]
+			},
+			{
+				"id": "stalwart",
+				"name": "Stalwart",
+				"fullName": "M-105 Stalwart",
+				"combo": "saswwa",
+				"cooldown": 480,
+				"calldownTime": 3,
+				"type": "supportWeapon",
+				"affectedBy": ["moraleAugmentation","streamlinedRequestProcess"]
+			},
+			{
+				"id": "expendableAntiTank",
+				"name": "Expendable Anti-Tank",
+				"fullName": "EAT-17 Expendable Anti-Tank",
+				"combo": "ssawd",
+				"cooldown": 70,
+				"calldownTime": 7.75,
+				"type": "supportWeapon",
+				"affectedBy": ["moraleAugmentation","streamlinedRequestProcess"]
+			},
+			{
+				"id": "recoillessRifle",
+				"name": "Recoilless Rifle",
+				"fullName": "GR-8 Recoilless Rifle",
+				"combo": "sadda",
+				"hasBackpack": true,
+				"type": "supportWeapon",
+				"affectedBy": ["moraleAugmentation","streamlinedRequestProcess"]
+			},
+			{
+				"id": "flamethrower",
+				"name": "Flamethrower",
+				"fullName": "FLAM-40 Flamethrower",
+				"type": "supportWeapon",
+				"combo": "sawsw"
+			},
+			{
+				"id": "autocannon",
+				"name": "Autocannon",
+				"fullName": "AC-8 Autocannon",
+				"combo": "saswwd",
+				"hasBackpack": true,
+				"type": "supportWeapon"
+			},
+			{
+				"id": "heavyMachineGun",
+				"name": "Heavy Machine Gun",
+				"fullName": "MG-206 Heavy Machine Gun",
+				"combo": "sawss",
+				"type": "supportWeapon"
+			},
+			{
+				"id": "airburstRocketLauncher",
+				"name": "Airburst Rocket Launcher",
+				"fullName": "RL-77 Airburst Rocket Launcher",
+				"combo": "sawsd",
+				"hasBackpack": true,
+				"type": "supportWeapon"
+			},
+			{
+				"id": "commando",
+				"name": "Commando",
+				"fullName": "MLS-4X Commando",
+				"combo": "sawsd",
+				"type": "supportWeapon"
+			},
+			{
+				"id": "railgun",
+				"name": "Railgun",
+				"fullName": "RS-422 Railgun",
+				"combo": "sdswad",
+				"type": "supportWeapon"
+			},
+			{
+				"id": "spear",
+				"name": "Spear",
+				"combo": "sswss",
+				"hasBackpack": true,
+				"type": "supportWeapon"
+			},
+			{
+				"id": "WASPLauncher",
+				"name": "W.A.S.P. Launcher",
+				"combo": "sswsd",
+				"hasBackpack": true,
+				"type": "supportWeapon"
+			}
+		],
+		"Orbital Cannons": [
+			{
+				"id": "orbitalGatlingBarrage",
+				"name": "Orbital Gatling Barrage",
+				"combo": "dsaww",
+				"type": "orbital"
+			},
+			{
+				"id": "orbitalAirburstStrike",
+				"name": "Orbital Airburst Strike",
+				"combo": "ddd",
+				"type": "orbital"
+			},
+			{
+				"id": "orbital120MMHEBarrage",
+				"name": "Orbital 120mm HE Barrage",
+				"combo": "dswwass",
+				"type": "orbital"
+			},
+			{
+				"id": "orbital380MMHEBarrage",
+				"name": "Orbital 380mm HE Barrage",
+				"combo": "dswwass",
+				"type": "orbital"
+			},
+			{
+				"id": "orbitalWalkingBarrage",
+				"name": "Orbital Walking Barrage",
+				"combo": "dsdsds",
+				"type": "orbital"
+			},
+			{
+				"id": "orbitalLaser",
+				"name": "Orbital Laser",
+				"combo": "dswds",
+				"type": "orbital"
+			},
+			{
+				"id": "orbitalNapalmBarrage",
+				"name": "Orbital Napalm Barrage",
+				"combo": "ddsadw",
+				"type": "orbital"
+			},
+			{
+				"id": "orbitalRailcannonStrike",
+				"name": "Orbital Railcannon Strike",
+				"combo": "dwssd",
+				"type": "orbital"
+			}
+		],
+		"Hangar": [
+			{
+				"id": "eagleStrafingRun",
+				"name": "Eagle Strafing Run",
+				"combo": "wdd",
+				"type": "eagle"
+			},
+			{
+				"id": "eagleAirstrike",
+				"name": "Eagle Airstrike",
+				"combo": "wdsd",
+				"type": "eagle"
+			},
+			{
+				"id": "eagleClusterBomb",
+				"name": "Eagle Cluster Bomb",
+				"combo": "wdssd",
+				"type": "eagle"
+			},
+			{
+				"id": "eagleNapalmAirstrike",
+				"name": "Eagle Napalm Airstrike",
+				"combo": "wdsw",
+				"type": "eagle"
+			},
+			{
+				"id": "jumpPack",
+				"name": "Jump Pack",
+				"combo": "swwsw",
+				"type": "backpack",
+				"calldownTime": 9.75
+			},
+			{
+				"id": "eagleSmokeStrike",
+				"name": "Eagle Smoke Strike",
+				"combo": "wdws",
+				"type": "eagle"
+			},
+			{
+				"id": "eagle110MMRocketPods",
+				"name": "Eagle 110mm Rocket Pods",
+				"combo": "wdwa",
+				"type": "eagle"
+			},
+			{
+				"id": "eagle500KGBomb",
+				"name": "Eagle 500KG Bomb",
+				"combo": "wdsss",
+				"type": "eagle"
+			},
+			{
+				"id": "fastReconVehicle",
+				"name": "Fast Recon Vehicle",
+				"combo": "asdsdsw",
+				"type": "vehicle"
+			}
+		],
+		"Bridge": [
+			{
+				"id": "orbitalPrecisionStrike",
+				"name": "Orbital Precision Strike",
+				"combo": "ddw",
+				"type": "orbital"
+			},
+			{
+				"id": "orbitalGasStrike",
+				"name": "Orbital Gas Strike",
+				"combo": "ddsd",
+				"type": "orbital"
+			},
+			{
+				"id": "orbitalEMSStrike",
+				"name": "Orbital EMS Strike",
+				"combo": "ddas",
+				"type": "orbital"
+			},
+			{
+				"id": "orbitalSmokeStrike",
+				"name": "Orbital Smoke Strike",
+				"combo": "ddsw",
+				"type": "orbital"
+			},
+			{
+				"id": "HMGEmplacement",
+				"name": "HMG Emplacement",
+				"combo": "swadda",
+				"type": "emplacement"
+			},
+			{
+				"id": "shieldGeneratorRelay",
+				"name": "Shield Generator Relay",
+				"combo": "ssadad",
+				"type": "emplacement"
+			},
+			{
+				"id": "teslaTower",
+				"name": "Tesla Tower",
+				"combo": "swdwad",
+				"type": "emplacement"
+			}
+		],
+		"Engineering Bay": [
+			{
+				"id": "antiPersonnelMinefield",
+				"name": "Anti-Personnel Minefield",
+				"combo": "sawd",
+				"type": "emplacement"
+			},
+			{
+				"id": "supplyPack",
+				"name": "Supply Pack",
+				"combo": "saswws",
+				"type": "backpack"
+			},
+			{
+				"id": "grenadeLauncher",
+				"name": "Grenade Launcher",
+				"combo": "sawas",
+				"type": "supportWeapon"
+			},
+			{
+				"id": "laserCannon",
+				"name": "Laser Cannon",
+				"combo": "saswa",
+				"type": "supportWeapon"
+			},
+			{
+				"id": "incendiaryMines",
+				"name": "Incendiary Minefield",
+				"combo": "saas",
+				"type": "emplacement"
+			},
+			{
+				"id": "guardDogRover",
+				"name": "\"Guard Dog\" Rover",
+				"combo": "swawdd",
+				"type": "backpack"
+			},
+			{
+				"id": "ballisticShieldBackpack",
+				"name": "Ballistic Shield Backpack",
+				"combo": "sasswa",
+				"type": "backpack"
+			},
+			{
+				"id": "arcThrower",
+				"name": "Arc Thrower",
+				"combo": "sdswaa",
+				"type": "supportWeapon"
+			},
+			{
+				"id": "antiTankMines",
+				"name": "Anti-Tank Minefield",
+				"combo": "saww",
+				"type": "emplacement"
+			},
+			{
+				"id": "quasarCannon",
+				"name": "Quasar Cannon",
+				"combo": "sswad",
+				"type": "supportWeapon"
+			},
+			{
+				"id": "shieldGeneratorPack",
+				"name": "Shield Generator Pack",
+				"combo": "swadad",
+				"type": "backpack"
+			},
+			{
+				"id": "gasMine",
+				"name": "Gas Mines",
+				"combo": "saad",
+				"type": "emplacement"
+			}
+		],
+		"Robotics Workshop": [
+			{
+				"id": "machineGunSentry",
+				"name": "Machine Gun Sentry",
+				"combo": "swddw",
+				"type": "sentry"
+			},
+			{
+				"id": "gatlingSentry",
+				"name": "Gatling Sentry",
+				"combo": "swda",
+				"type": "sentry"
+			},
+			{
+				"id": "mortarSentry",
+				"name": "Mortar Sentry",
+				"combo": "swdds",
+				"type": "sentry"
+			},
+			{
+				"id": "guardDog",
+				"name": "\"Guard Dog\"",
+				"combo": "swawds",
+				"type": "backpack"
+			},
+			{
+				"id": "autocannonSentry",
+				"name": "Autocannon Sentry",
+				"combo": "swdwaw",
+				"type": "sentry"
+			},
+			{
+				"id": "rocketSentry",
+				"name": "Rocket Sentry",
+				"combo": "swdda",
+				"type": "sentry"
+			},
+			{
+				"id": "EMSMortarSentry",
+				"name": "EMS Mortar Sentry",
+				"combo": "swdsd",
+				"type": "sentry"
+			},
+			{
+				"id": "patriotExosuit",
+				"name": "Patriot Exosuit",
+				"combo": "asdwass",
+				"type": "vehicle"
+			},
+			{
+				"id": "emancipatorExosuit",
+				"name": "Emancipator Exosuit",
+				"combo": "asdwasw",
+				"type": "vehicle"
+			}
+		],
+		"Warbonds": [
+			{
+				"id": "sterilizer",
+				"name": "Sterilizer",
+				"combo": "sawsa",
+				"type": "supportWeapon"
+			},
+			{
+				"id": "guardDogBreath",
+				"name": "\"Guard Dog\" Dog Breath",
+				"combo": "swawdw",
+				"type": "backpack"
+			},
+			{
+				"id": "directionalShield",
+				"name": "Directional Shield",
+				"combo": "swadww",
+				"type": "backpack"
+			},
+			{
+				"id": "antiTankEmplacement",
+				"name": "Anti-Tank Emplacement",
+				"combo": "swaddd",
+				"type": "sentry"
+			},
+			{
+				"id": "flameSentry",
+				"name": "Flame Sentry",
+				"combo": "swdsww",
+				"type": "sentry"
+			},
+			{
+				"id": "hellbombPortable",
+				"name": "Portable Hellbomb",
+				"combo": "sdwww",
+				"type": "backpack"
+			}
+		],
+		"Mission": [
+			{
+				"id": "reinforce",
+				"name": "Reinforce",
+				"combo": "wsdaw",
+				"type": "misc"
+			},
+			{
+				"id": "resupply",
+				"name": "Resupply",
+				"combo": "sswd",
+				"type": "misc"
+			},
+			{
+				"id": "eagleRearm",
+				"name": "Eagle Rearm",
+				"combo": "swawdsw",
+				"type": "eagle"
+			},
+			{
+				"id": "hellbomb",
+				"name": "Hellbomb",
+				"combo": "swaswdsw",
+				"type": "misc"
+			},
+			{
+				"id": "SOSBeacon",
+				"name": "SOS Beacon",
+				"combo": "wsdw",
+				"type": "misc"
+			},
+			{
+				"id": "SEAFArtillery",
+				"name": "SEAF Artillery",
+				"combo": "dwws",
+				"type": "misc"
+			}
+		]
+	}
+}

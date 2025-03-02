@@ -1,1 +1,13 @@
+# Fetch it yourself
 node_modules
+
+# This is personal
+loudouts.json
+
+# Generate these yourself with node iconGenerator.js (also works with bun)
+iconsLarge
+iconsSmall
+
+# I chose to use mario kart pickup noises, but I don't want to be republishing Nintendo's property.
+bindGen.wav
+bindGenEnd.wav

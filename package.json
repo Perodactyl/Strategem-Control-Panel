@@ -4,5 +4,6 @@
     "@types/svg2png": "^4.1.5",
     "ico-endec": "^0.1.6",
     "svg2png": "^4.1.1"
-  }
+  },
+  "type": "module"
 }

@@ -1,0 +1,37 @@
+{
+	"device": {
+		"vid": 9610,
+		"pid": 47,
+
+		"width": 4,
+		"height": 2
+	},
+	"bindings": [
+		{ "value": "reinforce" },
+		{ "value": "resupply" },
+		{ "accept": ["orbital", "eagle", "none", "none", "any"] },
+		{ "accept": ["eagle", "orbital", "none", "none", "any"] },
+		{ "accept": ["backpack", "supportWeapon", "sentry", "emplacement", "any"] },
+		{ "accept": ["supportWeapon", "backpack", "none", "none", "any"] },
+		{ "accept": ["vehicle", "emplacement", "sentry",  "none","any"] },
+		{ "value": "all" }
+	],
+	"input": {
+		"up": "w",
+		"left": "a",
+		"down": "s",
+		"right": "d",
+		"stim": "XButton1",
+		"reload": "XButton2"
+	},
+	"output": {
+		"up": "w",
+		"left": "a",
+		"down": "s",
+		"right": "d",
+		"stim": "v",
+		"reload": "r"
+	},
+	"keyDownTime": 30,
+	"keyUpTime": 30
+}

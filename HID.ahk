@@ -80,25 +80,35 @@ class HIDControl {
 		}
 	}
 	Register(vid, pid) {
-		targets := []
-		For d in this.devices {
-			if d.type == RIM_TYPEHID {
-				; if d.vid == vid and d.pid == pid {
-					targets.Push([d.usagePage, d.usage])
-				; }
-			}
-		}
+		targets := [
+			[0, 2]
+		]
+		; For d in this.devices {
+		; 	if d.type == RIM_TYPEHID {
+		; 		if d.vid == vid and d.pid == pid {
+		; 			targets.Push([d.usagePage, d.usage])
+		; 		}
+		; 	}
+		; }
 		; MsgBox("Registered " targets.Length " devices.")
 		RawInputDeviceSize := 8 + A_PtrSize
 		buf := Buffer(targets.Length * RawInputDeviceSize)
 		For target in targets {
 			offset := (A_Index - 1) * RawInputDeviceSize
+			/* RAWINPUTDEVICE
+			USHORT	2 0		usUsagePage
+			USHORT	2 2		usUsage
+			DWORD	4 4		dwFlags
+			HWND	p 4+p	hwndTarget
+			*/
 			NumPut("ushort", target[1], buf, offset + 0)
-			NumPut("ushort", target[1], buf, offset + 2)
-			NumPut("uint", 0, buf, offset + 4)
-			NumPut("ptr", window.Hwnd, buf, offset + 6)
+			NumPut("ushort", target[2], buf, offset + 2)
+			NumPut("uint", 0x00000100, buf, offset + 4)
+			NumPut("ptr", window.Hwnd, buf, offset + 8)
 		}
-		DllCall("RegisterRawInputDevices", "ptr", buf, "uint", targets.Length, "uint", RawInputDeviceSize)
+		if DllCall("RegisterRawInputDevices", "ptr", buf, "uint", targets.Length, "uint", RawInputDeviceSize) == false {
+			throw OSError(A_LastError)
+		}
 	}
 	report() {
 		output := ""
@@ -110,10 +120,14 @@ class HIDControl {
 	}
 	HANDLE_WM_INPUT(WParam, LParam, *) {
 		MsgBox("aaaa")
-		; pcbSize := 0
-		; DllCall("GetRawInputData", "ptr", LParam, "uint", 0x10000003, "ptr", 0, "ptr", &pcbSize, "uint", 8 + A_PtrSize * 2)
-		; buf := Buffer(pcbSize)
-		; DllCall("GetRawInputData", "ptr", LParam, "uint", 0x10000003, "ptr", buf, "ptr", &pcbSize, "uint", 8 + A_PtrSize * 2)
+		pcbSize := 0
+		if DllCall("GetRawInputData", "ptr", LParam, "uint", 0x10000003, "ptr", 0, "ptr", &pcbSize, "uint", 8 + A_PtrSize * 2) == false {
+			throw A_LastError
+		}
+		buf := Buffer(pcbSize)
+		if DllCall("GetRawInputData", "ptr", LParam, "uint", 0x10000003, "ptr", buf, "ptr", &pcbSize, "uint", 8 + A_PtrSize * 2) == false {
+			throw A_LastError
+		}
 		/*
 		DWORD	4 0		dwType
 		DWORD	4 4		dwSize
@@ -127,7 +141,7 @@ class HIDControl {
 		UINT	4 24+2p	Message
 		ULONG	8 28+2p	ExtraInformation
 		*/
-		; MsgBox("VKey:" NumGet(buf, 20 + A_PtrSize * 2, "ushort"))
+		MsgBox("VKey:" NumGet(buf, 20 + A_PtrSize * 2, "ushort"))
 		; return 0
 	}
 }
@@ -141,7 +155,6 @@ OnMessage(WM_INPUT, ctl.HANDLE_WM_INPUT)
 ; event := window.Add("Text", , "No events yet.")
 window.Show("w300 h300")
 list := window.Add("ListView", "r15", ["Type", "VID", "PID"])
-list.ModifyCol()
 for device in ctl.devices {
 	if device.type == RIM_TYPEHID {
 		list.Add(, "HID", Format("0x{1:04x}", device.vid), Format("0x{1:04x}", device.pid))

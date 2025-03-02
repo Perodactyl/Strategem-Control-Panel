@@ -118,7 +118,7 @@ class StrategemControlPanel {
 		This.BindingButtons := BindingButtons
 		This.Selection := 1 ; For the setter
 
-		LoadoutsMenu := ControlMenu.Add("GroupBox", "YS W210 H65", "Loadout")
+		LoadoutsMenu := ControlMenu.Add("GroupBox", "YS W210 H65", "Loadout Save/Load")
 		This.LoadoutSelector := ControlMenu.Add("ComboBox", "Section XP+5 YP+15 W200", Loadouts.LoadoutNames)
 		This.LoadoutSelector.Text := Loadouts.LoadoutName
 		LoadoutSave := ControlMenu.Add("Button", "XP YP+22 W50", "Save")
@@ -132,7 +132,7 @@ class StrategemControlPanel {
 		LoadoutMenu := ControlMenu.Add("GroupBox",
 			" XP W" BindingGridCellSize*2+10
 			" H" BindingGridCellSize*2+40,
-		"Loadout")
+		"Loadout: Strategems")
 		LoadoutMenuX := 0
 		LoadoutMenuY := 0
 		LoadoutMenu.GetPos(&LoadoutMenuX, &LoadoutMenuY)

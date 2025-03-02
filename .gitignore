@@ -1,8 +1,8 @@
 # Fetch it yourself
 node_modules
 
-# This is personal
-loudouts.json
+# This is per-person.
+loadouts.json
 
 # Generate these yourself with node iconGenerator.js (also works with bun)
 iconsLarge
